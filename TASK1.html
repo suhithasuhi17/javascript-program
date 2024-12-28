@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            flex-wrap:wrap;
+            margin: auto;
+            padding: 0%;
+        }
+       
+       div{
+        position:absolute;
+        top:25%;
+        left:600px;
+        width: 400px;
+        height:300px;
+        border: 5px black;
+        background-color: rgb(182, 128, 232);
+}
+@media screen and (max-width:900px){
+    div{
+        position:absolute;
+        left:100px;
+        top:20%;
+        
+    }
+}
+    div h2{
+        margin-top:40px;
+        margin-left:50px;
+        
+       }
+    div input{
+        margin-top: 50px;
+        margin-left:80px;
+        padding: 10px;
+        width: 200px;
+        }
+    div h1{
+        margin-left:85px;
+        
+    }
+    
+    </style>
+</head>
+<body>
+    <div>
+    <h2>TYPE YOUR MESSAGE</h2>
+    <input id="box"  onkeyup="text()">
+    <h1 id="result">CATCH UP!!!</h1>
+    </div>
+</body>
+<script>
+    //selecting the element
+    var textbox=document.getElementById("box")
+    var result=document.getElementById("result")
+
+    function text(){
+        var showtext=textbox.value
+        result.textContent=showtext
+    }
+</script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        div{
+           padding: 20px;
+            background-color: aquamarine;
+            position:absolute;
+            top:200px;
+            left:600px;
+        }
+        @media screen and (max-width:900px){
+    div{
+        position:absolute;
+        left:100px;
+        top:20%;
+        
+    }
+}
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Guess the Number</h1>
+    <input id="guessnum">
+    <button onclick="check()">Check</button>
+    <p id="result">You are right/wrong</p>
+    <p id="score">score:10</p>
+    </div>
+</body>
+       <script>
+        //selecting the element
+
+        var guessnum =document.getElementById("guessnum")
+        var result=document.getElementById("result")
+        var randomnum=Math.floor(Math.random()*10)+1
+        var score=document.getElementById("score")
+        var totalscore=10
+        function check(){
+            if(guessnum.value == randomnum){
+                result.textContent="Right"
+                alert("YOU WON")
+            }
+            else{
+                result.textContent="Wrong"
+                totalscore=totalscore-1
+
+                score.textContent="score:"+totalscore
+            }
+        }
+       </script>
+
+</html>

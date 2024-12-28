@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         table,tr,td 
+        {
+            width:150px;
+            border: 1px solid black;
+        }
+        button
+        {
+            background-color: rgb(65, 236, 65);;
+            color: white;
+            display: block;
+            margin: auto;
+            padding: 10px 10px;
+        }
+        .move{
+            margin-top: 100px;
+            margin-left:600px;
+        }
+    
+    </style>
+</head>
+<body>
+    <div >
+        <div class="move">
+            <h1> STUDENT FROM</h1>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>NAME</td>
+                        <td><input id="name"></td>
+                    </tr>
+                    <tr>
+                        <td>AGE</td>
+                        <td><input id="age"></td>
+                    </tr>
+                    <tr>
+                        <td>GENDER</td>
+                        <td id="gender">
+                           <input type="radio" name="gender">
+                           <lable for="gender"> Male</lable>
+                           <input type="radio" name="gender">
+                           <lable for="gender">female</lable>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><lable>COURSE</lable></td>
+                        <td>
+                            <select id="select">
+                                <option>Choose</option>
+                                <option>Python</option>
+                                <option>Java</option>
+                                <option>Javascript</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button id="save" >Save</button></td>
+                    </tr>
+                </tbody>
+                
+            </table>
+        </div>
+    </div>
+</body>
+<script>
+    var name=document.getElementById("name")
+    var age=document.getElementById("age")
+    var gender=document.getElementById("gender")
+    var select=document.getElementById("select")
+
+    function display(){
+        var stdname=name.value
+        var show=document.createElement("h2")
+        show.textContent=stdname
+        
+    }
+
+      
+</script>
+</html>
